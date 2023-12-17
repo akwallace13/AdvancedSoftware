@@ -1,0 +1,56 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="secondary">
+    <ion-title color="primary">Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+
+  <div align="center">
+    <ion-avatar>
+      <img src="assets/imgs/log.png" />
+    </ion-avatar>
+    <ion-label color="primary">Amanda Wallace</ion-label>
+  </div>
+
+  <ion-list>
+    <ion-item lines="full">
+      <ion-icon slot="start" name="notifications-outline"></ion-icon>
+      <ion-label>
+        Push Notifications
+      </ion-label>
+      <ion-toggle slot="end" [checked]="true"></ion-toggle>
+    </ion-item>
+    
+    <ion-item lines="full">
+      <ion-icon slot="start" name="finger-print-outline"></ion-icon>
+      <ion-label>
+        Touch ID Lock
+      </ion-label>
+      <ion-toggle slot="end" [checked]="true"></ion-toggle>
+    </ion-item>
+    
+    <ion-button fill="clear" (click)="changepass()">
+      <ion-icon slot="start" name="key-outline"></ion-icon>
+      <ion-label>
+        Change Password
+      </ion-label>
+    </ion-button>
+    
+    <ion-button fill="clear" routerLink="/support">
+      <ion-icon slot="start" name="help-buoy-outline"></ion-icon>
+      <ion-label>
+        Get Support
+      </ion-label>
+    </ion-button>
+    
+ 
+
+    <ion-button fill="clear" class="ion-margin" color="danger" (click)="logout()">
+      <ion-icon name="log-out" slot="start"></ion-icon> 
+      Logout
+    </ion-button>
+
+</ion-list>
+
+</ion-content>
